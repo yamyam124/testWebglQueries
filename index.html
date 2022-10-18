@@ -6,7 +6,23 @@
     <title>Unity WebGL Player | Test web for omaha</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script>
+</head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Test web for omaha</div>
+      </div>
+    </div>
+        <script>
         var buildUrl = "Build";
         var loaderUrl = buildUrl + "/webgl build.loader.js";
         var config = {
@@ -51,22 +67,6 @@
         };
         document.body.appendChild(script);
     </script>
-</head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Test web for omaha</div>
-      </div>
-    </div>
       <div style="border: solid 1px black; width: 200px; height: 30px; margin: auto; text-align:center" onclick="outUnityInstance.SendMessage('JavascriptHook', 'Tint')">Red</div>
       <div style="border: solid 1px black; width: 200px; height: 30px; margin: auto; text-align:center" onclick="outUnityInstance.SendMessage('JavascriptHook', 'Tint')">Green</div>
   </body>
